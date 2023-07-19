@@ -17,12 +17,12 @@ Starter Template Repo for C# assignments
       4. Finally click create repository. 
 3. After creating new repository go to settings 
 4. Select the template repository check box
-   ![Alt text](image link)
+   ![Creating template repo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/creating%20template.jpg)
 5. Now your repository will be a template repository 
 
 # How to use this C# Starter Repo
  1. While creating new repo add the “CSharp_Starter_Repo” template repository
- ![Alt text](image link) 
+![Using Template repo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/Using%20template%20repo.jpg) 
  2. Create new branch from main for each assignment 
  3. After adding your solution give PR to main branch 
  4. If all the validation is success you can merge to main  
@@ -30,9 +30,10 @@ Starter Template Repo for C# assignments
     
 # How to create workflow
 1. Open your repository and go to actions
-![Alt text](image link)
+![Click Action](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/Click%20Actions.JPG)
 2. Search for .NET configuration in the search bar
-![Alt text](image link)
+![.NET configure](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/select%20configure.jpg)
 3. Click configure and the dotnet.yaml file will be added to your workflow
-![Alt text](image link)
+![Yaml Config](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/yaml%20config.jpg)
 4. Configure the yaml file as your need
+
