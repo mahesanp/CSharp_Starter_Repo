@@ -4,6 +4,7 @@ env:
     solution_file_location: ./Calculator_Demo/Calculator_Demo.sln
     # Replace with the desired .NET Core version
     dotnetVersion : 7.0.x  
+    isFileExist :  false
     
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
