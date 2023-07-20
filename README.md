@@ -5,7 +5,6 @@ Starter Template Repo for C# assignments
 1. [How to create template repository](https://github.com/solitontech/CSharp_Starter_Repo#how-to-create-template-repository)
 2. [How to use this C# Starter Repo](https://github.com/solitontech/CSharp_Starter_Repo#how-to-create-workflow)
 3. [How to create workflow](https://github.com/solitontech/CSharp_Starter_Repo#how-to-create-workflow)
-4. [How to configure yaml files]()
 
 
 # How to create template repository
@@ -17,8 +16,8 @@ Starter Template Repo for C# assignments
       4. Finally click create repository. 
 3. After creating new repository go to settings 
 4. Select the template repository check box
-   ![Creating template repo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/creating%20template.jpg)
-5. Now your repository will be a template repository 
+   ![Creatingtemplaterepo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/README_Images/creating%20template.jpg)
+6. Now your repository will be a template repository 
 
 # How to use this C# Starter Repo
  1. While creating new repo add the “CSharp_Starter_Repo” template repository
