@@ -1,10 +1,7 @@
-name: Run Unit Test
+name: Build and run
 env:
-    # Replace with your solution location
-    solution_file_location: ./Calculator_Demo/Calculator_Demo.sln
-    # Replace with the desired .NET Core version
-    dotnetVersion : 7.0.x  
-    isFileExist :  false
+    isSolutionFileExist :  false
+    isTestFileExist :  false
     
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -14,8 +11,11 @@ on:
 
 jobs:
   Unit-tests:
-    # Use the latest version of Ubuntu as the runner
-    runs-on: ubuntu-latest
+    # Use the latest version of Windows as the runner
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
       # Checkout the repository to the runner
@@ -25,39 +25,64 @@ jobs:
       # Set up the .NET environment
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
-        with:         
-          dotnet-version: " 7.0.x"           
-      
-      # Restore the project dependencies   
-      - name: Restore dependencies
-        run: dotnet restore "$solution_file_location"
-        
-      # Build the project in Release configuration
-      - name: Build project
-        run: dotnet build --configuration Release "$solution_file_location"
-     
-      # Run unit test
-      - name: Run unit tests inside folder "UnitTest"
+        with:        
+          # Replace with the desired .NET Core version
+          dotnet-version: "7.0.x"       
+              
+      - name: Build all solutions
         run: |
           # The starting directory for iteration
-          starting_directory="UnitTest"
+          starting_directory="./"
+          
+          # Function to find all the .sln files in the directory
+          find_sln_files_to_build() {
+            for file in "$1"/*; do
+                  if [ -d "$file" ]; then
+                    find_sln_files_to_build "$file"
+                  elif [ "${file##*.}" = "sln" ]; then
+                    isSolutionFileExist=true
+                    echo -e "\n\nFound .sln file: $file" 
+                    dotnet restore "$file"
+                    dotnet build --configuration Release "$file"
+                  fi
+            done
+          }
+          #Calling  find_sln_files_to_build function with input parameter starting_directory
+          find_sln_files_to_build "$starting_directory"
+          
+          # If no solution file is found display "No solution files found to build"           
+          if [ "$isSolutionFileExist" == "false" ]
+           then
+              echo "No solution files found to build"
+          fi 
+        shell: bash 
+          
+          
+      - name: Run unit tests inside "UnitTest" directory
+        run: |
+          # The starting directory for iteration
+          starting_directory="./Tests/Unit_Test"
+          
           # Function to find .sln files
           find_sln_files() {
             for file in "$1"/*; do
               if [ -d "$file" ]; then
                 find_sln_files "$file"
               elif [ "${file##*.}" = "sln" ]; then
-                isFileExist=true
+                isTestFileExist=true
                 echo -e "\n\nFound .sln file: $file"
                 echo "Running unit test file $file"
                 dotnet test "$file"                
               fi
             done
           }
+          
+          #Calling  find_sln_files_to_build function with input parameter starting_directory
           find_sln_files "$starting_directory"
-                    
-          if [ "$isFileExist" == "false" ]
+           
+          # If no solution file is found display "No test files found" 
+          if [ "$isTestFileExist" == "false" ]
            then
               echo "No test files found"
           fi
-            echo "$isFileExist"
+        shell: bash
