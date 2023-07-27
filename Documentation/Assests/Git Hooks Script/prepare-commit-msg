@@ -14,11 +14,11 @@ MESSAGE=$(cat $1)
 
 #Valid regex for commit message
 valid_commit_message_regex="^(feat|fix|docs|style|refactor|test|chore|perf|other|ci|build|revert)+((:)|( : ))+[a-zA-Z0-9._-]"
-
+valid_commit_message="(feat|fix|docs|style|refactor|test|chore|perf|other|ci|build|revert):description"
 #Message to display when commit message is invalid
 message="Your commit was rejected due to the invalid commit message. Skipping...
 Please use the following format:
-(feat|fix|docs|style|refactor|test|chore|perf|other):description"
+$valid_commit_message"
 
 #Check whether the commit message is valid
 #If invalid return exit flag as 1

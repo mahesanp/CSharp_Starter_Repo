@@ -14,6 +14,8 @@ LC_ALL=C
 # To get the name of the current brach
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
+valid_branch="(feature|bugfix|improvement|library|prerelease|release|hotfix|feat|fix)-name-feature"
+
 # Regex for branch validation
 #Uncomment below regex to match pattern
 valid_branch_regex="^(feature|bugfix|improvement|library|prerelease|release|hotfix|feat|fix)\-[a-z0-9._-]+-[a-z0-9._-]+$"
@@ -26,7 +28,7 @@ valid_branch_regex="^(feature|bugfix|improvement|library|prerelease|release|hotf
 
 #Message to display when branch name is invalid
 message="There is something wrong with your branch name.
-Branch names in this project must adhere to this contract: $valid_branch_regex.
+Branch names in this project must adhere to this contract: $valid_branch.
 Your commit will be rejected. You should rename your branch to a valid name and try again."
 
 #Check whether the branch name is valid
