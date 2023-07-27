@@ -35,5 +35,5 @@ Starter Template Repo for C# assignments
 ![.NET configure](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/select%20configure.jpg)
 3. Click configure and the dotnet.yaml file will be added to your workflow
 ![Yaml Config](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/yaml%20config.jpg)
-4. Configure the yaml file as your need
+4. Configure the yaml file as your needs
 
