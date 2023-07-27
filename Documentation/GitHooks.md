@@ -20,7 +20,7 @@ Git hooks are located in the .git/hooks directory of your Git repository. Each h
 4. After adding git will execute these shell script and validate commit message and branch name while making commits
 
 # Pre-commit hook
-This hook runs before a commit is created. It allows you to perform pre-commit checks such as linting, code formatting, or running unit tests to ensure that code meets certain quality standards before being committed. Here we have used to validate branch name.
+This hook runs before a commit is created. It allows you to perform pre-commit checks such as linting, code formatting, or running unit tests to ensure that code meets certain quality standards before being committed. Here we have used this pre commit hook to validate branch name.
 
 # Prepare-commit-msg
-This hook is particularly useful for adding or modifying information in the commit message just before the user is prompted to edit it. Here we use to validate commit message.
+This hook is generally useful for adding or modifying information in the commit message just before the user is prompted to edit it. Here we use this hook to validate the commit message.
