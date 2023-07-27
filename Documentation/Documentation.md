@@ -17,12 +17,12 @@ Starter Template Repo for C# assignments
       4. Finally click create repository. 
 3. After creating new repository go to settings 
 4. Select the template repository check box
-   ![Creatingtemplaterepo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/creating%20template.jpg)
+   ![Creatingtemplaterepo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/creating%20template.jpg)
 6. Now your repository will be a template repository 
 
 # How to use this C# Starter Repo
  1. While creating new repo add the “CSharp_Starter_Repo” template repository
-![Using Template repo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Using%20template%20repo.jpg) 
+![Using Template repo](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/Using%20template%20repo.jpg) 
  2. Create new branch from main for each assignment 
  3. After adding your solution give PR to main branch 
  4. If all the validation is success you can merge to main  
@@ -30,10 +30,10 @@ Starter Template Repo for C# assignments
     
 # How to create workflow
 1. Open your repository and go to actions
-![Click Action](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Click%20Actions.JPG)
+![Click Action](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/Click%20Actions.JPG)
 2. Search for .NET configuration in the search bar
-![.NET configure](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/select%20configure.jpg)
+![.NET configure](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/select%20configure.jpg)
 3. Click configure and the dotnet.yaml file will be added to your workflow
-![Yaml Config](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/yaml%20config.jpg)
-4. Configure the yaml file as your need
+![Yaml Config](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/Documentation/Assests/Documentation/yaml%20config.jpg)
+4. Configure the yaml file as your needs
 
