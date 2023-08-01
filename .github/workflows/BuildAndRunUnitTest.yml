@@ -1,0 +1,62 @@
+name: Build and run test using single solution
+env:
+    isSolutionFileExist :  false
+    isTestFileExist :  false
+    
+on:
+  # Triggers the workflow on  pull request events 
+  pull_request:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  Unit-tests:
+    # Use the latest version of Windows as the runner
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      # Checkout the repository to the runner
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      # Set up the .NET environment
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:        
+          # Replace with the desired .NET Core version
+          dotnet-version: "6.0.x"       
+              
+      - name: Build the solutions
+        run: dotnet build 
+                   
+      - name: Run unit tests inside "Test" directory
+        run: |
+          # The starting directory for iteration
+          starting_directory="./Tests/Unit_Test"
+          
+          # Function to find .sln files
+          find_sln_files() {
+            for file in "$1"/*; do
+              if [ -d "$file" ]; then
+                find_sln_files "$file"
+              elif [ "${file##*.}" = "csproj" ]; then
+                isTestFileExist=true
+                echo -e "\n\nFound .csproj file: $file"
+                echo "Running unit test file $file"
+                dotnet test "$file"                
+              fi
+            done
+          }
+          
+          #Calling  find_sln_files_to_build function with input parameter starting_directory
+          find_sln_files "$starting_directory"
+           
+          # If no solution file is found display "No test files found" 
+          if [ "$isTestFileExist" == "false" ]
+           then
+              echo "No test files found"
+          fi
+        shell: bash
