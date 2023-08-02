@@ -7,15 +7,15 @@ Git hooks are located in the .git/hooks directory of your Git repository. Each h
 
 1. After creating your repo with Charp template repo you can see two shell scripts inside ./Documentation/Assest/GitHooks directory
    
-![Step1](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/git%20hooks/Step1.jpg) 
+![Step1](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/Images/GitHooks_Images/CopyScripts.jpg) 
 
 2. Copy both the files and add it inside the directory .git/Hooks/
 
-![Step2](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/git%20hooks/Step2.jpg) 
+![Step2](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/Images/GitHooks_Images/PasteScripts.jpg) 
 
 3. If .git directory is not visible go to View->Show Hidden File
 
-![Step3](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/git%20hooks/Step3.jpg)
+![Step3](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/Images/GitHooks_Images/ShowHiddenItems.jpg)
    
 4. After adding git will execute these shell script and validate commit message and branch name while making commits
 
