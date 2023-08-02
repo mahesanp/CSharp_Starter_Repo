@@ -3,7 +3,7 @@
 A VSIX package is a .vsix file that **contains one or more Visual Studio extensions**, together with the **metadata** Visual Studio uses to classify and install the extensions. That metadata is contained in the VSIX manifest and the [Content_Types].xml file. 
 
 ### QuickLinks
-
+1. [How to install VSIX Package](https://github.com/solitontech/CSharp_Starter_Repo/main/docs/VSIX%20template%20Manual.md#how-to-install-vsix-package)
 
 
 ### How to install VSIX Package
