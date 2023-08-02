@@ -1,7 +1,7 @@
 
 # QuickLinks
-1. [How to create template repository](https://github.com/solitontech/CSharp_Starter_Repo/edit/main/docs/how%20to%20create%20template%20repository%20and%20add%20workflow.md#how-to-create-template-repository)
-2. [How to create workflow](https://github.com/solitontech/CSharp_Starter_Repo#how-to-create-workflow)
+1. [How to create template repository](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/how%20to%20create%20template%20repository%20and%20add%20workflow.md#how-to-create-template-repository)
+2. [How to create workflow](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/how%20to%20create%20template%20repository%20and%20add%20workflow.md#how-to-create-workflow)
 
 # How to create template repository
 1. Login to your GitHub account 
@@ -12,7 +12,7 @@
       4. Finally click create repository. 
 3. After creating new repository go to settings 
 4. Select the template repository check box
-   ![https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/Images/HowToCreateTemplateRepo_Images/SelectTemplateRepo.jpg)
+   ![SelectCheckBox](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/Images/HowToCreateTemplateRepo_Images/SelectTemplateRepo.jpg)
 6. Now your repository will be a template repository 
     
 # How to create workflow
