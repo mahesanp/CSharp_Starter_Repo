@@ -13,9 +13,6 @@ jobs:
   Unit-tests:
     # Use the latest version of Windows as the runner
     runs-on: windows-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
       # Checkout the repository to the runner
