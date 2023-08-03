@@ -43,7 +43,7 @@ jobs:
                 isTestFileExist=true
                 echo -e "\n\nFound .csproj file: $file"
                 echo "Running unit test file $file"
-                dotnet test "$file"                
+                dotnet test --no-restore "$file"                 
               fi
             done
           }
