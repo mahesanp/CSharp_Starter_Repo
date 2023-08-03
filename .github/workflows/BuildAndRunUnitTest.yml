@@ -32,7 +32,7 @@ jobs:
       - name: Run unit tests inside "Test" directory
         run: |
           # The starting directory for iteration
-          starting_directory="./Tests/Unit_Test"
+          starting_directory="./test/unit"
           
           # Function to find .sln files
           find_sln_files() {
