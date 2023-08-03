@@ -5,7 +5,7 @@ Git hooks are located in the .git/hooks directory of your Git repository. Each h
 
 # How to add git hooks in your local repo
 
-1. After creating your repo with Charp template repo you can see two shell scripts inside ./Documentation/Assest/GitHooks directory
+1. After creating your repo with CSharp template repo you can see two shell scripts inside (docs--> Assets --> GitHookScripts)
    
 ![Step1](https://github.com/solitontech/CSharp_Starter_Repo/blob/main/docs/assets/Images/GitHooks_Images/CopyScripts.jpg) 
 
