@@ -28,19 +28,15 @@ valid_branch_regex="^(feature|bugfix|improvement|library|prerelease|release|hotf
 
 #Message to display when branch name is invalid
 message="There is something wrong with your branch name.
-Branch names in this project must have this format: $valid_branch.
-Your commit will be rejected. You should rename your branch to a valid name.
-To rename your branch enter
-        git branch -m old_branch_name new_branch_name
-"
+Branch names in this project must adhere to this contract: $valid_branch.
+Your commit will be rejected. You should rename your branch to a valid name and try again."
 
 #Check whether the branch name is valid
 #If invalid return exit status as 1
 #Or return exit status as 0
-if [[ ! $local_branch =~ $valid_branch_regex ]]
+if [[ ! "$local_branch" == "main" && ! "$local_branch" =~ $valid_branch_regex ]]
 then
     echo "$message"
     exit 1
 fi
-
 exit 0
