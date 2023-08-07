@@ -10,6 +10,7 @@ jobs:
   Unit-tests:
     # Use the latest version of Windows as the runner
     runs-on: windows-latest
+    timeout-minutes: 60
     
     steps:
       # Checkout the repository to the runner
